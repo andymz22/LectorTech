@@ -1,3 +1,3 @@
 # LectorTech
 SPA
-Primer proyecto web universitario
+Cliente Lector Tech
