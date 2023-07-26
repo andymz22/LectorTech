@@ -1,0 +1,377 @@
+@import url(reset_app.css);
+@import url(global.css);
+
+
+
+/* HEADER */
+
+.header__inicio{
+    width: 100%;
+    height: 40svh;
+    background-image: url(../img/background-home2.jpg);
+    -webkit-background-size: cover;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.header__back{
+    background: rgba(0, 0, 0, 0.5);
+    position: relative;
+    width: 3rem;
+    height: 3rem;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.header__back::before{
+    content: "";
+    position: absolute;
+    inset: -0.625rem 1rem;
+    background: var(--gradient);
+    transition: 0.5s;
+    animation: animate-back 4s linear infinite;
+}
+
+.header__back:hover::before{
+    inset: -1.25rem 0rem;
+}
+
+@keyframes animate-back{
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
+
+.header__back::after{
+    content: "";
+    position: absolute;
+    inset: .125rem;
+    background: #162052;
+    border-radius: 50%;
+    z-index: 1;
+}
+
+.header__a{
+    z-index: 2;
+}
+
+.header__i-logo{
+    transform: scale(1.5);
+    color: var(--third-color);
+}
+
+.header__logo{
+    font-size: 7em;
+    font-weight: 600;
+    margin: 0 7rem 0 2.5rem;
+    color: var(--third-color);
+}
+
+.header__span{
+    color: var(--primary-color);
+}
+
+
+
+
+/* MAIN */
+/* LIBROS LAYOUT */
+
+.contenedor{
+    text-align: center;
+    width: 90%;
+    margin: 0 auto;
+}
+
+.contenedor__h2{
+    padding: 4rem 0 4rem 0;
+    font-size: 2.2em;
+    font-weight: 800;
+    color: var(--primary-color);
+}
+
+.contenedor__desarrollo{
+    display: grid;
+    grid-template-columns: 20% 75%;
+    gap: 2rem;
+}
+
+.contenedor__libros{
+    display: grid;
+    grid-template-columns: 1;
+    gap: 5rem;
+
+}
+
+.contenedor__libros-img{
+    width: 15.625rem;
+    height: 18.5rem;
+    margin-bottom: .5rem;
+    background-color: lightgray;
+    border: solid .125rem var(--primary-color);
+    border-radius: .625rem;
+    overflow: hidden;    
+}
+
+.contenedor__img{
+    object-fit: cover;
+    object-position: center;
+}
+
+/* TEXTO - SINOPSIS */
+
+.contenedor__texto--first{
+    position: relative;
+    width: 100%;
+    height: 18.5rem;
+    border: solid .125rem var(--primary-color);
+    border-radius: .625rem;
+}
+
+.contenedor__texto{
+    position: relative;
+    width: 100%;
+    margin-top: 5.5rem;
+    height: 18.5rem;
+    text-align: center;
+    border: solid 2px var(--primary-color);
+    border-radius: .625rem;
+}
+
+.contenedor__h3{
+    margin: .5rem;
+    color: var(--primary-color);
+    font-size: 1.2em;
+    font-weight: 500;
+}
+
+.contenedor__p{
+    margin: 0 5rem 0 5rem;
+    color: var(--secondary-color);
+    font-size: 1em;
+}
+
+.contenedor__compra{
+    margin-left: 9%;
+    position: absolute;
+    top: 82%;
+    left: 0;
+    border-top: .125rem solid var(--primary-color);
+    border-bottom: .125rem solid var(--primary-color);
+    padding: .3125rem;
+}
+
+.contenedor__a{
+    color: var(--fourth-color);
+    transition: .5s ease;
+}
+
+.contenedor__a:hover{
+    color: var(--primary-color);
+}
+
+/* TABLA */
+
+.contenido__h2{
+    font-size: 4em;
+    line-height: 5rem;
+    font-weight: 800;
+    line-height: 5rem;
+    color: var(--primary-color);
+    padding: 1rem 0 0 0;
+    margin: 1rem 0 3rem 0;
+    text-align: center;
+}
+
+.contenido__tabla--flex{
+    display: flex;
+    justify-content: center;
+}
+
+.contenido__tabla-categorias{
+    width: 60%;
+    height: 40%;
+    display: flex;
+    justify-content: center;
+    border-right: solid .125rem var(--primary-color) ;
+    border-left: solid .125rem var(--primary-color) ;
+    border-top: solid .125rem var(--primary-color) ;
+}
+
+.contenido__tabla{
+    border-collapse: collapse;
+    font-size: 1.1em;
+    table-layout: fixed;
+}
+
+.contenido__th{
+    padding: 1.25rem .9375rem;
+    border-bottom: solid .125rem var(--primary-color);
+    color: var(--primary-color);
+}
+
+.contenido__td{
+    padding: .9375rem;
+    border-bottom: solid .125rem var(--primary-color);
+    color: var(--secondary-color);
+}
+
+.contenido__tr{
+    padding: .5rem;
+    text-align: left;
+}
+
+/* LISTAS */
+
+.contenido{
+    padding: 2rem;
+    margin: 4rem 4rem 6rem 4rem;
+}
+
+.contenido__tabla--flex{
+    width: 100%;
+}
+
+.contenido__listas{
+    margin-top: 4rem;
+    font-size: 1em;
+    display: flex;
+}
+
+.contenido__lista-ordenada{
+    margin-right: 5rem;
+}
+
+.contenido__lista-ordenada-titulo{
+    color: var(--primary-color);
+}
+
+.contenido__lista-ordenada-descripcion{
+    color: var(--fifth-color);
+}
+
+.contenido__lista-ordenada-item{
+    list-style-type: disc;
+    color: var(--secondary-color);
+    padding: .5rem;
+}
+
+.contenido__lista-desordenada-item{
+    list-style-type: decimal;
+    color: var(--secondary-color);
+    padding: .5rem;
+}
+
+.contenido__lista-desordenada-titulo{
+    color: var(--primary-color);
+}
+
+.contenido__lista-desordenada-descripcion{
+    color: var(--fifth-color);
+}
+
+/* VIDEO - TECNOLOGIA */
+
+.media{
+    padding: 0rem 0rem 3rem 2rem;
+    margin: 0 auto;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 10rem;
+}
+
+.media__h2-titulo{
+    font-size: 4em;
+    line-height: 5rem;
+    font-weight: 800;
+    line-height: 5rem;
+    color: var(--primary-color);
+    padding: 1rem 0 0 0;
+    margin: 1rem 0 3rem 0;
+    text-align: center;
+}
+
+.media__video-tecnologia{
+    width: 40%;
+    height: 30%;
+    display: flex;
+    justify-content: center;
+}
+
+
+
+
+/* FOOTER */
+
+.footer{
+    margin-top: 3rem;
+    width: 100%;
+    background-color: var(--fifth-color);
+    border-top-left-radius: 5rem;
+    border-top-right-radius: 5rem;
+    display: grid;
+    justify-content: center;
+}
+
+.footer__contenido{
+    width: 100%;
+    max-width: 75rem;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 3rem;
+    padding: 2.8rem 0rem;
+}
+
+.footer__logo{ 
+    margin: 2.5rem;
+}
+
+.footer__logo-text{
+    font-size: 3em;
+    font-weight: 600;
+    color: var(--third-color);
+}
+
+.footer__span{
+    color: var(--primary-color);
+}
+
+.footer__h2{
+    font-size: 1.6em;
+    font-weight: 500;
+    line-height: 3rem;
+    color: var(--primary-color);
+}
+
+.footer__p{
+    font-size: 1em;
+}
+
+.footer__copyright{
+    width: 100%;
+    background-color: var(--primary-color);
+    text-align: center;
+}
+
+.footer__small-copy{
+    font-size: 1.1em;
+}
+
+
+
+
+
+
+

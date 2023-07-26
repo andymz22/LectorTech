@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Encuesta</title>
+
+    <link rel="stylesheet" href="../styles/encuesta.css">
+    <link rel="shortcut icon" href="../img/favicon.png" type="image/x-icon">
+    <script src="https://kit.fontawesome.com/20e9351c89.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <header>
+        <section class="header__inicio">
+        <div class="header__back">
+            <a class="header__a" href="index.html"><i class="header__i-logo fa-solid fa-arrow-left"></i></a>
+        </div>
+        <a href="#" class="header__logo">Encuesta<span class="header__span">TECH</span></a>
+        </section>
+    </header>
+
+    <main>
+        <section class="encuesta__form">
+            <h2 class="encuesta__titulo-form"></h2>
+
+            <form class="formulario">
+                <div class="formulario__label-grid">
+                    <label for="nombre" class="formulario__label">Nombre:</label>
+                    <input type="text" id="nombre" name="nombre" class="formulario__input" placeholder="Ingresa tu nombre">
+                
+                    <label for="email" class="formulario__label">Email:</label>
+                    <input type="email" id="email" name="email" class="formulario__input" placeholder="Ingresa tu email">
+                
+                    <label for="telefono" class="formulario__label">Teléfono:</label>
+                    <input type="tel" id="telefono" name="telefono" class="formulario__input" placeholder="Ingresa tu teléfono">
+                
+                    <label for="direccion" class="formulario__label">Localidad:</label>
+                    <input type="text" id="direccion" name="direccion" class="formulario__input" placeholder="Ingresa tu localidad">
+                </div>
+
+                <div class="formulario__radio-flex">
+                    <p class="formulario__subtitulo">Preferencia de género:</p>
+                    <label for="genero1" class="formulario__opcion">
+                    <input type="radio" id="genero1" name="genero" value="accion" class="formulario__radio">
+                    IA
+                    </label>
+                    <label for="genero2" class="formulario__opcion">
+                    <input type="radio" id="genero2" name="genero" value="comedia" class="formulario__radio">
+                    Hacking
+                    </label>
+                    <label for="genero3" class="formulario__opcion">
+                    <input type="radio" id="genero3" name="genero" value="drama" class="formulario__radio">
+                    Programacion
+                    </label>
+                </div>
+
+                <div class="formulario__checkbox-flex">
+                    <p class="formulario__subtitulo">Intereses:</p>
+                    <label for="interes1" class="formulario__opcion">
+                    <input type="checkbox" id="interes1" name="intereses[]" value="libros" class="formulario__checkbox">
+                    Libros
+                    </label>
+                    <label for="interes2" class="formulario__opcion">
+                    <input type="checkbox" id="interes2" name="intereses[]" value="peliculas" class="formulario__checkbox">
+                    Películas
+                    </label>
+                    <label for="interes3" class="formulario__opcion">
+                    <input type="checkbox" id="interes3" name="intereses[]" value="series" class="formulario__checkbox">
+                    Series
+                    </label>
+                </div>
+                
+                <div class="formulario__opciones-flex">
+                    <h3 class="formulario__h3">¿Libro que mas te gusto?</h3>
+                    <label for="opciones" class="formulario__label">Libros:</label>
+                    <input placeholder="Ingresa un libro" type="text" id="opciones" name="opciones" list="opciones-lista" class="formulario__input">
+                    <datalist class="opciones__lista" id="opciones-lista">
+                        <option value="Pragmatic Programmer"></option>
+                        <option value="Sistemas Operativos"></option>
+                        <option value="The Age Of IA"></option>
+                        <option value="Everyday Chaos"></option>
+                        <option value="Technology & Society"></option>
+                        <option value="The Exponential Age"></option>
+                        <option value="Vida 3.0"></option>
+                        <option value="Al 2041"></option>
+                    </datalist>
+                </div>
+
+                <div class="formulario__comentarios">
+                    <label for="comentarios" class="formulario__label">Comentarios:</label>
+                    <textarea id="comentarios" name="comentarios" class="formulario__textarea" rows="4" placeholder="Ingresa un comentario"></textarea>
+                </div>
+                    <button type="submit" class="formulario__boton">Enviar</button>
+               
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <section class="footer">
+            <article class="footer__contenido">
+            <div class="footer__logo">
+                <a class="footer__logo-text" href="#">Lector<span class="footer__span">TECH</span></a>
+            </div>
+            <div class="footer__about">
+                <h2 class="footer__h2">Sobre Mi</h2>
+                <p class="footer__p">Mi nombre es Andres Martinez, de la COMISION 1.<hr> Vivo en Hurlingham y me apasiona el Front.  </p>
+            </div>
+            </article>
+        </section>
+            <div class="footer__copyright">
+                <small class="footer__small-copy">&copy; 2023 <b>Andres Martinez</b> - Todos Los Derechos Reservados.</small>
+            </div>
+    </footer>
+</body>
+</html>
+
